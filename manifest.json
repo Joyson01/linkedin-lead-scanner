@@ -1,0 +1,28 @@
+{
+  "name": "LinkedIn Lead Intelligence Scanner",
+  "description": "Advanced LinkedIn lead scanner - search entire LinkedIn for specific problems. Matches people with shipping, payment, and other issues.",
+  "version": "2.0.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "LinkedIn Lead Intelligence Scanner",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "downloads", "scripting", "tabs", "webRequest"],
+  "host_permissions": ["https://*.linkedin.com/*", "https://www.linkedin.com/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["lib/xlsx.full.min.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.linkedin.com/*", "https://www.linkedin.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

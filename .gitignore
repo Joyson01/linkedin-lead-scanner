@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+*.zip
+*.rar
+dist/
+build/
+.env
+.idea/
+.vscode/settings.json

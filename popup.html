@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkedIn Lead Intelligence Scanner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>Lead Intelligence Scanner</h1>
+        <p>Scan LinkedIn feed posts for problem keywords.</p>
+      </header>
+
+      <section class="panel">
+        <label for="keywords">Keywords (comma-separated)</label>
+        <input
+          id="keywords"
+          type="text"
+          placeholder="e.g. shipping, payment, hiring, looking for"
+        />
+
+        <div class="controls">
+          <button id="scanBtn" class="primary">Scan feed</button>
+          <button id="autoSearchBtn" class="secondary">Search LinkedIn</button>
+          <label class="toggle">
+            <input id="autoScrollToggle" type="checkbox" />
+            <span>Auto-scroll</span>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button id="exportBtn">Export to Excel</button>
+          <button id="clearBtn" class="ghost">Clear results</button>
+        </div>
+
+        <div class="status">
+          <span id="resultCount">0 results</span>
+          <span id="statusMessage"></span>
+        </div>
+      </section>
+
+      <section class="results">
+        <h2>Recent matches</h2>
+        <div id="resultList" class="result-list"></div>
+      </section>
+    </div>
+
+    <script src="lib/xlsx.full.min.js"></script>
+    <script src="init.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
