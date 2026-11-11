@@ -100,9 +100,6 @@ linkedin-lead-scanner/
 ├── styles.css                 # All styling
 ├── lib/
 │   └── xlsx.full.min.js       # Excel library
-├── EXPORT_GUIDE.md            # Export feature guide
-├── QUICK_START.md             # Quick start guide
-├── TESTING_GUIDE.md           # Testing documentation
 └── README.md                  # This file
 ```
 
@@ -141,6 +138,7 @@ linkedin-lead-scanner/
 - `downloads` - Export to Excel
 - `scripting` - Inject content scripts
 - `tabs` - Tab management
+- `webRequest` - Declared in the extension manifest
 - `host_permissions` - Access LinkedIn pages
 
 ## Troubleshooting 🐛
@@ -211,8 +209,8 @@ MIT License - Feel free to use and modify
 ## Support 💬
 
 - **Issues** - Report via GitHub Issues
-- **Documentation** - See QUICK_START.md and EXPORT_GUIDE.md
-- **Testing** - See TESTING_GUIDE.md
+- **Documentation** - Setup, usage, and troubleshooting are documented in this README.
+- **Testing** - `test.js` is present; there is no packaged automated test command.
 
 ## Version History 📝
 
